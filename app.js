@@ -1,6 +1,7 @@
 const express = require("express")
 
 const adminRouter = require("./controllers/adminRouter")
+const trainerRouter = require("./controllers/trainerRouter")
 
 const memberRouter = require("./controllers/memberRouter")
 
@@ -16,6 +17,7 @@ app.use(express.json())
 
 
 app.use("/api/admin", adminRouter)
+app.use("/api/trainer", trainerRouter)
 
 app.use("/api/member", memberRouter)
 
