@@ -40,7 +40,8 @@ router.post('/addadmin', async (req, res) => {
 
 router.post('/login',(req,res)=>{
     const { email,password }=req.body;
-    adminModel.loginAdmin(email,password,(error,admin)=>{
+    const pword=bcrypt.compare(password,admin.password)
+    adminModel.loginAdmin(email,pword,(error,admin)=>{
         if(error)
         {
             res.json({
@@ -53,7 +54,7 @@ router.post('/login',(req,res)=>{
                 status:"Invalid Email ID"
             })
         }
-        if(password !== admin.password)
+        if(pword !== admin.password)
         {
             res.json({
                 status:"Invalid Email ID"
