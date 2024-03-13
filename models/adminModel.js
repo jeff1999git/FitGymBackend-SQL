@@ -28,16 +28,3 @@ const adminModel={
 }
 
 module.exports=adminModel;
-
-// const adminschema=new mongoose.Schema(
-//     {
-        
-        
-//             name:String,
-//             age:String,
-//             mail:String,
-//             password:String
-        
-//     }
-// )
-// module.exports=mongoose.model("adminlogin",adminschema)
