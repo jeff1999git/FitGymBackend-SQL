@@ -16,11 +16,6 @@ const packageModel = {
         const query = 'SELECT * FROM plans';
         pool.query(query, callback);
     }
-    // ,
-    // updatePackage: (admin_email, callback) => {
-    //     const query = 'SELECT * FROM admin WHERE admin_email = ?';
-    //     pool.query(query, [admin_email], callback);
-    // }
 }
 
 module.exports = packageModel;

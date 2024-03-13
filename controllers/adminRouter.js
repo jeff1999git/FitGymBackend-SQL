@@ -1,5 +1,4 @@
 const express = require("express")
-
 const adminModel = require("../models/adminModel")
 const bcrypt = require("bcryptjs")
 const router = express.Router()
